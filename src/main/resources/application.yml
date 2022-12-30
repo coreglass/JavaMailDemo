@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/javamail?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root # 数据库用户名
+    password: 123456  # 数据库密码
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+  mail:
+    host: smtp.qq.com          # 邮箱协议
+    username: 943614819@qq.com # 发送的邮箱地址
+    password: kdhvwakxuulabege # 邮箱的授权码
+    default-encoding: UTF-8
+    properties:
+      mail:
+      smtp:
+      auth: true
+      socketFactory:
+      port: 465
+      class: javax.net.ssl.SSLSocketFactory
+      fallback: false
+      starttls:
+      enable: true
+      required: true
+
+mybatis:
+  type-aliases-package: com.yuwen.pojo
+  configuration:
+    map-underscore-to-camel-case: true
