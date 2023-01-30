@@ -21,7 +21,7 @@ public class UserController {
         boolean flag = userService.sendCode(user);
         Map<String,String> map = new HashMap<>();
         if(flag){
-            map.put("msg","邮件发送成功，请前往您的邮箱进行注册验证");
+            map.put("msg","邮件发送成功，请前往您的邮箱进行注册验证---");
             return map;
         }else {
             map.put("msg","邮件发送失败----");
