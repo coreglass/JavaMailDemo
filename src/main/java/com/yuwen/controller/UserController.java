@@ -15,7 +15,7 @@ public class UserController {
     @Resource
     UserService userService;
 
-    // 根据用户注册信息进行注册链接的的生成和发送
+    // 根据用户注册信息进行注册链接的的生成和发送..
     @PostMapping("/sendCode")
     public Map<String,String> sendCode(@RequestBody User user){
         boolean flag = userService.sendCode(user);
